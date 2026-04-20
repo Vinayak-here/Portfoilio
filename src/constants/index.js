@@ -91,16 +91,6 @@ const navLinks = [
       size: "h-28",
     },
     {
-      name: ".NET Developer",
-      imgPath: "/images/NET-Framework-Symbol.png",
-      size: "h-32",
-    },
-    {
-      name: "Backend Developer",
-      imgPath: "/images/Csharp_Logo.png",
-      size: "h-32",
-    },
-    {
       name: "Adaptive Interface Developer",
       imgPath: "/images/tailwindlogo.svg",
       size: "h-28",
@@ -108,6 +98,16 @@ const navLinks = [
     {
       name: "Database Management",
       imgPath: "/images/dblogo2.svg",
+      size: "h-24",
+    },
+    {
+      name: "Backend Developer",
+      imgPath: "/images/nodejslogo.png",
+      size: "h-24",
+    },
+    {
+      name: "NEXT JS",
+      imgPath: "/images/Nextjslogo.svg",
       size: "h-24",
     },
   ];
@@ -123,10 +123,10 @@ const navLinks = [
       title: "Fullstack Developer",
       date: "Agust 2024 - Present",
       responsibilities: [
-        "Collaborated closely with UI/UX designer to ensure seamless user experiences.",
-        "Developing and maintaining Truens platform to help users detect AI-generated videos & images.",
-        "Building platform for connecting high quality Content creators with the Giant companies and agencies. "
-        
+        "Collaborated closely with UI/UX designers and team members to deliver smooth and user-friendly experiences.",
+        "Worked directly with clients on the Lapis & Oak project, understanding requirements and delivering features as per business needs.",
+        "Developed and maintained key features for web applications, ensuring reliability and consistent performance.",
+        "Took ownership of tasks from development to deployment, ensuring timely delivery and quality outcomes."
       ],
     },
   ];
@@ -178,6 +178,11 @@ const navLinks = [
       name: "linkedin",
       imgPath: "/images/linkedin.png",
       url: "https://www.linkedin.com/in/vinayak-patil-081a26212/"
+    },
+    {
+      name: "github",
+      imgPath: "/images/giticon.png",
+      url: "https://github.com/Vinayak-fr"
     },
     {
       name: "github",
