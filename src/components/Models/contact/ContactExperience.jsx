@@ -1,11 +1,22 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
+import { useMediaQuery } from "react-responsive";
 import Computer from "./Computer";
+import useInView from "../../../hooks/useInView";
 
 const ContactExperience = () => {
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const [wrapperRef, inView] = useInView();
+
   return (
-    <Canvas shadows camera={{ position: [0, 3, 7], fov: 45 }}>
+    <div ref={wrapperRef} className="w-full h-full">
+    <Canvas
+      shadows
+      camera={{ position: [0, 3, 7], fov: 45 }}
+      dpr={[1, 1.5]}
+      frameloop={inView ? "always" : "never"}
+    >
       <ambientLight intensity={0.5} color="#fff4e6" />
 
       <directionalLight position={[5, 5, 3]} intensity={2.5} color="#ffd9b3" />
@@ -17,11 +28,13 @@ const ContactExperience = () => {
         color="#ffd9b3"
       />
 
-      <OrbitControls
-        enableZoom={false}
-        minPolarAngle={Math.PI / 5}
-        maxPolarAngle={Math.PI / 2}
-      />
+      {!isTablet && (
+        <OrbitControls
+          enableZoom={false}
+          minPolarAngle={Math.PI / 5}
+          maxPolarAngle={Math.PI / 2}
+        />
+      )}
 
       <group scale={[1, 1, 1]}>
         <mesh
@@ -38,6 +51,7 @@ const ContactExperience = () => {
         <Computer />
       </group>
     </Canvas>
+    </div>
   );
 };
 

@@ -41,24 +41,16 @@ const Experience = () => {
     // The timeline height should scale down from 1 to 0
     // as the user scrolls up the screen
     gsap.to(".timeline", {
-      // Set the origin of the animation to the bottom of the timeline
+      scaleY: 0,
       transformOrigin: "bottom bottom",
-      // Animate the timeline height over 1 second
-      ease: "power1.inOut",
-      // Trigger the animation when the timeline is at the top of the screen
-      // and end it when the timeline is at 70% down the screen
+      ease: "none",
       scrollTrigger: {
         trigger: ".timeline",
         start: "top center",
         end: "70% center",
-        // Update the animation as the user scrolls
-        onUpdate: (self) => {
-          // Scale the timeline height as the user scrolls
-          // from 1 to 0 as the user scrolls up the screen
-          gsap.to(".timeline", {
-            scaleY: 1 - self.progress,
-          });
-        },
+        // scrub ties the animation to scroll position directly
+        // (the old onUpdate created a brand new tween on every scroll event)
+        scrub: 0.5,
       },
     });
 
