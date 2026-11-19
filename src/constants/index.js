@@ -1,3 +1,12 @@
+// Career start date — the "X+ years" text on the site is calculated from this.
+const CAREER_START = new Date(2024, 7, 1); // 1 Aug 2024 (month is 0-based)
+
+// Rounds down to the nearest half year, e.g. 2.3 years -> "2+", 2.6 years -> "2.5+"
+const getExperienceYears = () => {
+  const years = (Date.now() - CAREER_START.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+  return `${Math.floor(years * 2) / 2}+`;
+};
+
 const navLinks = [
     {
       name: "Work",
@@ -68,48 +77,33 @@ const navLinks = [
   const abilities = [
     {
       imgPath: "/images/seo.png",
-      title: "Commitment to Quality",
-      desc: "Consistently contributing to high-quality deliverables with a strong focus on detail and team standards.",
+      title: "Performance First",
+      desc: "Optimized data fetching, caching and memoization to cut redundant API calls and improve page performance by up to 50%.",
     },
     {
       imgPath: "/images/chat.png",
-      title: "Effective Team Communication",
-      desc: "Collaborating closely with team members and stakeholders to ensure alignment and clarity throughout the project lifecycle.",
+      title: "End-to-End Ownership",
+      desc: "From client requirements to production on AWS — working with designers, backend and product teams in Agile/Scrum sprints.",
     },
     {
       imgPath: "/images/time.png",
-      title: "Timely Execution",
-      desc: "Prioritizing efficient workflows and timely completion of tasks to support project milestones and business goals.",
+      title: "Solid API & State Handling",
+      desc: "REST integrations with auth flows, loading and error states, backed by Redux Toolkit, Zustand and TanStack Query.",
     },
   ];
   
   
   const techStackImgs = [
-    {
-      name: "React Developer",
-      imgPath: "/images/logos/react.png",
-      size: "h-28",
-    },
-    {
-      name: "Adaptive Interface Developer",
-      imgPath: "/images/tailwindlogo.svg",
-      size: "h-28",
-    },
-    {
-      name: "Database Management",
-      imgPath: "/images/dblogo2.svg",
-      size: "h-24",
-    },
-    {
-      name: "Backend Developer",
-      imgPath: "/images/nodejslogo.png",
-      size: "h-24",
-    },
-    {
-      name: "NEXT JS",
-      imgPath: "/images/Nextjslogo.svg",
-      size: "h-24",
-    },
+    { name: "React", imgPath: "/images/logos/react.png", size: "h-28" },
+    { name: "Next.js", imgPath: "/images/Nextjslogo.svg", size: "h-24" },
+    { name: "TypeScript", imgPath: "/images/logos/typescript.svg", size: "h-24" },
+    { name: "Node.js & Express", imgPath: "/images/nodejslogo.png", size: "h-24" },
+    { name: "Python & FastAPI", imgPath: "/images/logos/fastapi.svg", size: "h-24" },
+    { name: "PostgreSQL, MongoDB & MS SQL", imgPath: "/images/dblogo2.svg", size: "h-24" },
+    { name: "AWS (Amplify, EC2, RDS, S3)", imgPath: "/images/logos/aws.svg", size: "h-20" },
+    { name: "Docker & CI/CD", imgPath: "/images/logos/docker.svg", size: "h-24" },
+    { name: "Tailwind CSS & shadcn/ui", imgPath: "/images/tailwindlogo.svg", size: "h-28" },
+    { name: "Agentic AI (LangGraph, RAG)", imgPath: "/images/logos/langchain.svg", size: "h-24" },
   ];
   
   
@@ -120,13 +114,14 @@ const navLinks = [
       review: "He's a talented developer with excellent technical skills. His work on the Truens project was top-notch, showcasing his dedication, versatility and attention to detail. Also he is a reliable team player who consistently delivers high-quality results",
       imgPath: "/images/ALfulllogo.svg",
       logoPath: "/images/ALicon.svg",
-      title: "Fullstack Developer",
-      date: "Agust 2024 - Present",
+      title: "Full Stack Developer · Acelucid Technologies",
+      date: "August 2024 - Present",
       responsibilities: [
-        "Collaborated closely with UI/UX designers and team members to deliver smooth and user-friendly experiences.",
-        "Worked directly with clients on the Lapis & Oak project, understanding requirements and delivering features as per business needs.",
-        "Developed and maintained key features for web applications, ensuring reliability and consistent performance.",
-        "Took ownership of tasks from development to deployment, ensuring timely delivery and quality outcomes."
+        "Building responsive React/TypeScript dashboards integrated with ASP.NET and FastAPI backends, with token-based auth, protected routes and centralized state management.",
+        "Designing secure REST APIs with JWT auth, role-based access control and input validation, backed by well-structured SQL and NoSQL schemas and server-verified payment flows.",
+        "Deploying and running apps on AWS (Amplify, EC2, RDS, S3) with Dockerized builds and CI/CD pipelines for repeatable releases.",
+        "Optimizing frontend performance with smarter data fetching, response caching and memoization, cutting redundant API calls and re-renders.",
+        "Worked directly with clients on Lapis & Oak (Strapi 5, Razorpay, AWS) and Quibs, a US client product with a timestamped movie commentary stream.",
       ],
     },
   ];
@@ -192,6 +187,7 @@ const navLinks = [
   ];
   
   export {
+    getExperienceYears,
     words,
     abilities,
     logoIconsList,

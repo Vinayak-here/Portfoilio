@@ -1,5 +1,5 @@
 import React from 'react'
-import { words } from '../constants'
+import { words, getExperienceYears } from '../constants'
 import Button from '../components/Button'
 import HeroExperience from '../components/HeroModels/HeroExperience'
 import { useGSAP } from '@gsap/react'
@@ -51,7 +51,7 @@ const Hero = () => {
                             <h1>into Real Projects </h1>
                             <h1>that Deliver Results </h1>
                         </div>
-                        <p className='text-white-50 md:text-xl reletive z-10 pointer-events-none'>Hey there, I'm Vinay, a developer based in India with passion for tech.
+                        <p className='text-white-50 md:text-xl relative z-10 pointer-events-none max-w-xl text-balance'>Hey there, I'm Vinay — a Full Stack Developer from India with {getExperienceYears()} years building fast, scalable web apps with React, TypeScript, Node.js and AWS.
                         </p>
                         <Button
                             className="md:w-80 md:h-16 w-60 h-12"

@@ -51,11 +51,11 @@ const ShowcaseSection = () => {
                     {/* LEFT */}
                     <div className='first-project-wrapper'  ref={project1Ref}>
                         <div className='image-wrapper'>
-                            <img src="/images/project1.png" alt="Ryde" />
+                            <img src="/images/project1.png" alt="Truens" />
                         </div>
                         <div className='text-content'>
-                            <h2>Detect AI-Generated Videos and Images Easily with Our Smart and Intuitive Platform — Truens</h2>
-                            <p className='text-white-50 md:text-xl'>A website built with React, TailwindCSS, and advanced detection tools to identify fake AI-generated content</p>
+                            <h2>Truens — Detect AI-Generated Images and Videos</h2>
+                            <p className='text-white-50 md:text-xl'>A React platform that integrates detection APIs to flag fake AI-generated images and videos, built closely with the UI/UX and backend teams.</p>
                         </div>
 
                     </div>
@@ -63,15 +63,15 @@ const ShowcaseSection = () => {
                     <div className='project-list-wrapper overflow-hidden' >
                         <div className='project' ref={project2Ref}>
                             <div className='image-wrapper bg-[#ffefdb]'>
-                                <img src="/images/lapisandoak.png" alt="Library Management" />
+                                <img src="/images/lapisandoak.png" alt="Lapis & Oak" />
                             </div>
-                            <h2>Lapis&Oak - Spa booking Website</h2>
+                            <h2>Lapis & Oak — E-commerce with Razorpay checkout and automated gift vouchers</h2>
                         </div>
 
 
                         <div className='project' ref={project3Ref}>
                             <div className='image-wrapper bg-[#ffe7eb]'>
-                                <img src="/images/beexpert.png" alt="YC Directory" />
+                                <img src="/images/beexpert.png" alt="BeExpert" />
                             </div>
                             <h2>BeExpert - AI Interview Prep platform</h2>
                         </div>
